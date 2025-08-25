@@ -38,3 +38,23 @@ class ECM:
         V_terminal = self.OCV() - (current*self.R0) - self.VRC(current)
         
         return V_terminal, soc
+    
+    def tester(self):
+
+        V_terminal_hist = []
+        SOC_hist        = []
+        
+        for _ in range(1000):
+            current = np.random.random()
+            V_terminal, SOC = self.step(current)
+            V_terminal_hist.append(V_terminal)
+            SOC_hist.append(SOC)
+
+        fig, ax = plt.subplots(1, 2, figsize=(10, 6))
+        ax[0].plot(V_terminal_hist, label = "Voltage", color = "red")
+        ax[1].plot(SOC_hist, label = "SOC", color = "blue")
+        ax[0].grid(True)
+        ax[1].grid(True)
+        ax[0].legend()
+        ax[1].legend()
+        plt.show()
