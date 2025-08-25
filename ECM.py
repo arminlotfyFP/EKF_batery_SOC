@@ -37,5 +37,4 @@ class ECM:
         soc = self.SOC(current)
         V_terminal = self.OCV() - (current*self.R0) - self.VRC(current)
         
-
         return V_terminal, soc
