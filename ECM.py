@@ -63,7 +63,3 @@ class ECM:
         ax[1].legend()
         ax[2].legend()
         plt.show()
-
-
-model = ECM()
-model.tester()
