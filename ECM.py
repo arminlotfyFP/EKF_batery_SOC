@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 
 class ECM:
-    def __init__(self,R0=0.01,R=0.02,C=2500,SOCInit=1.0, Vmax=4.2, Vmin=2.5, dt=1, Q=3.2):
+    def __init__(self,R0=0.01,R=0.02,C=2500,SOCInit=1.0, Vmax=4.2, Vmin=2.5, dt=1.0, Q=3.2):
         
         if R0 is None or R is None or C is None or Q is None:
             raise ValueError("R0, R, C, and Q must be provided (non-None).")
