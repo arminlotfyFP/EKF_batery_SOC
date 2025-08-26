@@ -1,9 +1,0 @@
-import numpy as np
-import matplotlib.pyplot as plt
-import os
-print(os.getcwd())
-os.chdir("/home/armin/Desktop/EKF_SOC/EKF_batery_SOC")
-
-from ECM import ECM
-
-model = ECM()
